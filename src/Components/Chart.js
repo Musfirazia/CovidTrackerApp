@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Line, Bar } from 'react-chartjs-2';
-import CountryPicker from './CountryPicker.js';
+import { Line} from 'react-chartjs-2';
 
 export default function Chart() {
-    const data=useState({});
-  const country=useState("");
+
     const [dailyData, setDailyData] = useState({});
     useEffect(() => {
         async function getdata() {
@@ -31,7 +29,7 @@ export default function Chart() {
     return (
         <div className="container">
             
-              <CountryPicker/>
+              
             {linechart}
           
         </div>

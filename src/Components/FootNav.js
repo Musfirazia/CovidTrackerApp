@@ -18,9 +18,6 @@ const useStyles = makeStyles({
 
 export default function SimpleBottomNavigation({screenConfig}) {
   const classes = useStyles();
-  
-  const [value, setValue] = React.useState(0);
-
   return (
     <BottomNavigation
       value={screenConfig[0]}
