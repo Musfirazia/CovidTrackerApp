@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '20px',
     },
 }));
-export default function CountryPicker(props) {
+export default function CountryPicker() {
     
     const classes = useStyles();
     const [Countries, setFetchCountries] = useState([]);
