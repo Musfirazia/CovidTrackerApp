@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Chart from './Chart.js'
 const { default: CountryPicker } = require("./CountryPicker");
 
@@ -23,7 +23,7 @@ class CountriesStats extends React.Component {
     }
 
     render() {
-        const { data } = this.state;
+        // const { data } = this.state;
         return (
             <div >
                 <CountryPicker handleCountryChange={this.handleCountryChange}/>
