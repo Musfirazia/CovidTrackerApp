@@ -26,7 +26,7 @@ class CountriesStats extends React.Component {
         const { data } = this.state;
         return (
             <div >
-                <CountryPicker handleCountryChange={handleCountryChange}/>
+                <CountryPicker handleCountryChange={this.handleCountryChange}/>
                 <Chart />
 
             </div>
