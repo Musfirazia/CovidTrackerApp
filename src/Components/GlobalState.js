@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function InfoBar() {
+export default function GlobalState() {
     const classes = useStyles();
     const [globalData, setglobalData] = useState({});
     useEffect(() => {

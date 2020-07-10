@@ -1,12 +1,13 @@
 
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from './Components/Navbar.js'
-import InfoBar from './Components/InfoBar.js'
+import InfoPanel from './Components/InfoPanel.js'
+import FootNav from './Components/FootNav.js'
 const useStyles = makeStyles((theme) => ({
   root: {
-
+    
     margin:'15px',
   },
  
@@ -14,13 +15,15 @@ const useStyles = makeStyles((theme) => ({
 
 
 function App() {
+  const screenConfig=useState(0);
+  
   const classes = useStyles();
   return (
     <div className="App">
       <div className={classes.root}>
           <Navbar/>
-     <InfoBar/>
-    
+     <InfoPanel currentscreen={screenConfig} />
+    <FootNav screenConfig={screenConfig}/>
     </div>
     </div>
   );
