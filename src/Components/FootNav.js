@@ -2,10 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-
+import stats from '../images/download.png'
+import world from '../images/world1.png'
 const useStyles = makeStyles({
   root: {
      marginTop:'15px',
@@ -14,6 +12,7 @@ const useStyles = makeStyles({
     width: 500,
     justifyContent: 'center',
   },
+
 });
 
 export default function SimpleBottomNavigation({screenConfig}) {
@@ -27,9 +26,9 @@ export default function SimpleBottomNavigation({screenConfig}) {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="Global Statistics" icon={<RestoreIcon />} />
-      <BottomNavigationAction label="Other Countries" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Graphical view" icon={<LocationOnIcon />} />
+      <BottomNavigationAction label="Global Statistics" icon={<img width="30px" height="30px" src={world}/>} />
+      <BottomNavigationAction label="Graphical View" icon={<img width="30px" height="30px" src={stats}/>} />
+
     </BottomNavigation>
   );
 }

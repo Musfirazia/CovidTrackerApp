@@ -4,10 +4,15 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from './Components/Navbar.js'
 import InfoPanel from './Components/InfoPanel.js'
-import FootNav from './Components/FootNav.js'
+import FootNav from './Components/FootNav.js';
+import covid from './images/covid.jpg';
+
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    
+
+
     margin:'15px',
   },
  

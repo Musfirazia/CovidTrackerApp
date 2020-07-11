@@ -1,7 +1,5 @@
 import React from 'react';
-
-import GlobalState from './GlobalState.js'
-import AllCountries from './AllCountries.js';
+import GlobalState from './GlobalState.js';
 import CountriesStats from './CountriesStats.js';
 export default function InfoPanel(props) {
     console.log(props.currentscreen[0])
@@ -10,10 +8,6 @@ export default function InfoPanel(props) {
        <GlobalState/>    
     );
    }
-   else if(props.currentscreen[0] === 1)
-{
-    return(<AllCountries/>)
-}
    else {
        return(<CountriesStats/>)
    }

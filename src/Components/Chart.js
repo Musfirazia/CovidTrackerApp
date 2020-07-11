@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Line} from 'react-chartjs-2';
+import { Line, Bar } from 'react-chartjs-2';
 
-export default function Chart() {
+export default function Chart({ data: {confirmed, recovered, deaths }, country }) {
 
     const [dailyData, setDailyData] = useState({});
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function Chart() {
         }
         getdata();
     }, [])
-    const linechart = (
+    const lineChart = (
         dailyData.length ?
             (
                 <Line data={{
@@ -26,12 +26,29 @@ export default function Chart() {
                 }} />
             ) : null
     )
+    const barChart = (
+        confirmed ?
+            (<Bar
+                data={
+                    {
+                        labels: ["Infected", "Recovered", "Deaths"],
+                        datasets: [{
+                            label: 'People',
+                            backgroundColor: ['rgba(0,0,255,0.5)', 'rgba(0,255,0,0.5)', 'rgba(255,0,0,0.5)'],
+                            data: [confirmed,recovered, deaths]
+                        }]
+                    }
+                }
+           options={{
+               legend:{display:false},
+               title:{display:true,text:`Current state in ${country}`},
+           }}/>
+            ):null
+    );
+    
     return (
         <div className="container">
-            
-              
-            {linechart}
-          
+{country ? barChart:lineChart}
         </div>
     )
 }
