@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import covid from '../images/image.png';
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,7 +49,7 @@ export default function NavBar() {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                 <img src={covid} /> 
+                 <img src={covid} alt="Covid-19" /> 
 
                     <Typography className={classes.title} variant="h6" noWrap>
                         Covid - 19 Tracker App

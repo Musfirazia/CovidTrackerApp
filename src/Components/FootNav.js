@@ -26,8 +26,8 @@ export default function SimpleBottomNavigation({screenConfig}) {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="Global Statistics" icon={<img width="30px" height="30px" src={world}/>} />
-      <BottomNavigationAction label="Graphical View" icon={<img width="30px" height="30px" src={stats}/>} />
+      <BottomNavigationAction label="Global Statistics" icon={<img width="30px" height="30px"alt="Global Stats" src={world}/>} />
+      <BottomNavigationAction label="Graphical View" icon={<img width="30px" height="30px" alt="Graphs" src={stats}/>} />
 
     </BottomNavigation>
   );

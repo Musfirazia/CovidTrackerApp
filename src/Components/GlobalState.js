@@ -28,7 +28,6 @@ export default function GlobalState() {
             const response = await fetch("https://api.thevirustracker.com/free-api?global=stats");
             let data = await response.json();
             delete data.results[0].source;
-            console.log(data);
             setglobalData(data.results[0]);
 
         }
